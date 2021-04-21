@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>クイズ</div>
+    <div>今年のコナンの映画のタイトルは？</div>
+    <button id="button1">緋色の弾丸</button>
+    <button id="button2">紺青の拳</button>
+    <button id="button3">異次元の狙撃手</button>
+    <script>
+      const button1 = document.getElementById("button1")
+      const button2 = document.getElementById("button2")
+      const button3 = document.getElementById("button3")
+
+      button1.onclick = function() {
+        button1.textContent = "正解"
+      }
+      button2.onclick = function() {
+        button2.textContent = "不正解"
+      }
+      button3.onclick = function() {
+        button3.textContent = "不正解"
+      }
+    </script>
+  </body>
+</html>
