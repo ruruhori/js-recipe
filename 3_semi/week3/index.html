@@ -20,8 +20,14 @@
 
         let memos = ["1", "2", "3"]
 
+        if (localStorage.memos) {
+          const memosJson = localStorage.memos
+          memos = JSON.parse(memosJson)
+        }
+
         addButton.onclick = function() {
           memos.push(memoInput.value)
+          localStorage.memos = JSON.stringify(memos)
           console.log(memos)
 
           console.dir(memoInput)
