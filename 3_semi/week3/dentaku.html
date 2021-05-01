@@ -5,33 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>calculate</title>
+    <script>
+      function calc(cmd) {
+        if (cmd == "=") {
+          document.form.text.value = eval(document.form.text.value)
+        } else if (cmd == "C") {
+          document.form.text.value = ""
+        } else {
+          document.form.text.value += cmd
+        }
+      }
+    </script>
   </head>
   <body>
-    <script src="main4.js"></script>
-
-    <input type="text">
-
-    <div>
-      <button id="one-button">1</button>
-      <button id="two-button">2</button>
-      <button id="three-button">3</button>
-    </div>
-    <div>
-      <button id="four-button">4</button>
-      <button id="five-button">5</button>
-      <button id="six-buttom">6</button>
-    </div>
-    <div>
-    <button id="seven-button">7</button>
-    <button id="eight-button">8</button>
-    <button id="nine-button">9</button>
-    </body>
-      <button id="plus-button">+</button>
-      <button id="minus-button">-</button>
-      <button id="times-button">×</button>
-    </div>
-    <button id="divided-button">÷</button>
-    <button id="equals-button">=</button>
-    <button id="clear-button">CLR</button>
+    <h2 id="display"></h2>
+    <form name="form" id="calcForm">
+      <table id="calcTable">
+        <tr>
+          <td colspan="3"><input type="text" name="text" value="0" /></td>
+          <td><input type="button" value="Ｃ" onClick="calc('C')" /></td>
+        </tr>
+        <tr>
+          <td><input type="button" value="７" onClick="calc('7')" /></td>
+          <td><input type="button" value="８" onClick="calc('8')" /></td>
+          <td><input type="button" value="９" onClick="calc('9')" /></td>
+          <td><input type="button" value="／" onClick="calc('/')" /></td>
+        </tr>
+        <tr>
+          <td><input type="button" value="４" onClick="calc('4')" /></td>
+          <td><input type="button" value="５" onClick="calc('5')" /></td>
+          <td><input type="button" value="６" onClick="calc('6')" /></td>
+          <td><input type="button" value="✕" onClick="calc('*')" /></td>
+        </tr>
+        <tr>
+          <td><input type="button" value="１" onClick="calc('1')" /></td>
+          <td><input type="button" value="２" onClick="calc('2')" /></td>
+          <td><input type="button" value="３" onClick="calc('3')" /></td>
+          <td><input type="button" value="－" onClick="calc('-')" /></td>
+        </tr>
+        <tr>
+          <td><input type="button" value="０" onClick="calc('0')" /></td>
+          <td><input type="button" value="．" onClick="calc('.')" /></td>
+          <td><input type="button" value="＋" onClick="calc('+')" /></td>
+          <td><input type="button" value="＝" onClick="calc('=')" /></td>
+        </tr>
+      </table>
+    </form>
   </body>
 </html>

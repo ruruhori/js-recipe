@@ -9,9 +9,16 @@
 }
 
 .rounded {
-  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  background-color: black;
 }
 
 .triangle {
-  width: 150px;
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 100px solid black;
 }
